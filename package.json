@@ -1,0 +1,28 @@
+{
+  "name": "algolia-in-fifteen",
+  "version": "1.0.0",
+  "description": "Algolia in fifteen minutes using JS API and InstantSearch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agdavid/algolia-in-fifteen-js.git"
+  },
+  "author": "@agdavid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agdavid/algolia-in-fifteen-js/issues"
+  },
+  "homepage": "https://github.com/agdavid/algolia-in-fifteen-js#readme",
+  "dependencies": {
+    "JSONStream": "^1.3.5",
+    "dotenv-extended": "^2.4.0",
+    "dotenv-parse-variables": "^0.2.0",
+    "event-stream": "^4.0.1",
+    "fs": "^0.0.1-security",
+    "lodash": "^4.17.11",
+    "path": "^0.12.7"
+  }
+}
