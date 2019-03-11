@@ -19,23 +19,27 @@ There are many ways to get Node.js on your system (brew, setup files...) but the
 # Sign-up for Algolia
 1. Login to your Algolia account or Sign-up for an account [here](https://www.algolia.com/users/sign_up) if you don't have one already (Note: You can get a free [Community](https://www.algolia.com/pricing/) plan)
 
-# Setup the Backend
+
+# Upload Your Data
 2. Copy the `.env.defaults` file and name it `.env` for your configuration variables 
 ```
 cp .env.defaults .env
 ```
+
 3. Navigate to the "API Keys" tab in your Algolia Dashboard to find the Application ID and Admin API Key, then in your `.env` file set the following values:
 ```
+
 ALGOLIA_APP_ID=YOUR_APP_ID
 ALGOLIA_ADMIN_API_KEY=YOUR_ADMIN_API_KEY
 ALGOLIA_INDEX_NAME=YOUR_INDEX_NAME_OF_YOUR_CHOICE
 ``` 
+
 4. Install the node modules:
 ```
 yarn
 ```
 
-5. In `index.js` Line 10 we require the [Algolia Javascript API Client](https://www.algolia.com/doc/api-client/getting-started/instantiate-client-index/)
+5. In `index.js` Line 10 we require the [Algolia Javascript API Client](https://www.algolia.com/doc/api-client/getting-started/instantiate-client-index/). But, don't forget, Algolia has [API clients](https://www.algolia.com/doc/) for many languages.
 ```
 const algoliasearch = require('algoliasearch');
 ```
@@ -65,4 +69,15 @@ const index = client.initIndex(indexName);
 yarn upload
 ```
 
+# Set Your Relevance
+
+10. You have many options for [setting relevance](), but at a minimum set [searchable attributes](https://www.algolia.com/doc/guides/managing-results/must-do/searchable-attributes/)
+
+
 # Setup the Frontend
+
+11. Use the boilerplate InstantSearch.js [codesandbox](https://codesandbox.io/s/7oxwxrl5o6), which has the Algolia widgets, fork it and use it to get started
+
+12. In `app.js` replace the Algolia credentials with your own APP ID, Search API Key, and index name
+
+13. Review the [available widgets](https://www.algolia.com/doc/api-reference/widgets/js/) and enjoy testing them out using your data in `app.js` and `index.html`
