@@ -76,8 +76,8 @@ yarn upload
 
 # Setup the Frontend
 
-11. Use the boilerplate InstantSearch.js [codesandbox](https://codesandbox.io/s/7oxwxrl5o6), which has the Algolia widgets, fork it and use it to get started
+11. Use the boilerplate InstantSearch.js [codesandbox](https://codesandbox.io/s/7oxwxrl5o6), fork it and use it to get started
 
-12. In `app.js` replace the Algolia credentials with your own APP ID, Search API Key, and index name
+12. In `app.js` build out your search widgets using this [Getting Started](https://www.algolia.com/doc/guides/building-search-ui/getting-started/js/) guide
 
 13. Review the [available widgets](https://www.algolia.com/doc/api-reference/widgets/js/) and enjoy testing them out using your data in `app.js` and `index.html`
