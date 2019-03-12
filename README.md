@@ -51,7 +51,7 @@ const indexName = process.env.ALGOLIA_INDEX_NAME;
 const index = client.initIndex(indexName);
 ```
 
-7. Pick your dataset and copy-and-paste it into `data.json`. Algolia has [free datasets](https://github.com/algolia/datasets) here if you're interested.
+7. We pre-populated some data, but feel free to pick your JSON dataset and copy-and-paste it into `data.json`. Algolia has [free datasets](https://github.com/algolia/datasets) here if you're interested.
 
 8. In `index.js` Line 40 shape your date into a JSON record of your choosing. For example:
 ```

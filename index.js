@@ -35,25 +35,21 @@ fs.createReadStream(path.join(__dirname, 'data.json'), { encoding: 'utf8' })
   .pipe(JSONStream.parse('*'))
   .pipe(
     es.through(
-      (obj) => {
-          let record = {
-            // create your attribute/value pairs
-          };
-          list.push(record)},
+      obj => list.push(obj),
       () => {
         console.log('Completed JSON processing');
-        console.log('Chunking records into chunks of 10');
+        console.log('Chunking into chunks of 10');
         const chunks = _.chunk(list, 10);
-        console.log('Starting transfer of records to index');
+        console.log('Starting transfer of to index');
         Promise.all(
           chunks.map(chunk =>
             index
               .addObjects(chunk)
-              .then(() => console.log('Finished chunk of 10 records'))
+              .then(() => console.log('Finished chunk of 10'))
           )
         ).then(() => {
           console.log(
-            `Finished transfer of ${list.length} records to ${indexName} index`
+            `Finished transfer of ${list.length} to ${indexName} index`
           );
           process.exit();
         });
